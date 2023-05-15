@@ -52,7 +52,22 @@ public class WebDriverCommands {
         System.out.println("refresh page URL: " +URL);
         driver.manage().window().maximize();
 
+        //enter first incorrect username
+        WebElement element = driver.findElement(By.name("username"));
+        element.sendKeys("Diego Armando Maradona");
+        Thread.sleep(2000);
+        element.submit();
+        element.clear();
+        Thread.sleep(2000);
 
+        //enter second incorrect username
+        WebElement element1 = element;
+        element1.sendKeys("Darko Pancev");
+        element1.submit();
+        Thread.sleep(2000);
+        driver.navigate().refresh();
+
+        driver.navigate().back();
 
 
 
