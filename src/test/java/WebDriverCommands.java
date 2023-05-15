@@ -5,7 +5,9 @@
 //Navigation Commands: (navigate().forward(); navigate.back(); navigate().to(); navigate().refresh());
 //Switch Commands: (switchTo().frame(); switchTo().alert(); SwitchTo().defaultContent(); switchTo()window(); DriverWindowHandles());
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class WebDriverCommands {
@@ -50,7 +52,9 @@ public class WebDriverCommands {
         System.out.println("refresh page URL: " +URL);
         driver.manage().window().maximize();
 
-        driver.close();
+
+
+
 
     }
 
