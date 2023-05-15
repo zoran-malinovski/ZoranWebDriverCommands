@@ -23,7 +23,12 @@ public class WebDriverCommands {
         System.out.println("the URL is : " +URL);
         Thread.sleep(2000);
 
-        
+        //driverObject.navigate().to()"URL"
+        driver.navigate().to("https://login.yahoo.com");
+        URL = driver.getCurrentUrl();
+        driver.manage().window().maximize();
+        System.out.println("navigate to URL : " +URL);
+
     }
 
 }
