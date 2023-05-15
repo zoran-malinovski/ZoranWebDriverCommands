@@ -42,6 +42,15 @@ public class WebDriverCommands {
         URL = driver.getCurrentUrl();
         driver.manage().window().maximize();
         System.out.println("navigate forward to url: " +URL);
+        Thread.sleep(2000);
+
+        //driverObject.navigate().refresh();
+        driver.navigate().refresh();
+        URL = driver.getCurrentUrl();
+        System.out.println("refresh page URL: " +URL);
+        driver.manage().window().maximize();
+
+        driver.close();
 
     }
 
