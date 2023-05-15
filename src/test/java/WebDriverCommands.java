@@ -5,5 +5,25 @@
 //Navigation Commands: (navigate().forward(); navigate.back(); navigate().to(); navigate().refresh());
 //Switch Commands: (switchTo().frame(); switchTo().alert(); SwitchTo().defaultContent(); switchTo()window(); DriverWindowHandles());
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
 public class WebDriverCommands {
+
+    public static void main(String[] args) throws InterruptedException {
+
+        System.setProperty("webdriver.chrome.driver", "C:\\Chrome Drivers\\chromedriver.exe");
+        WebDriver driver;
+        driver = new ChromeDriver();
+
+        //driverObject.get("URL")
+        driver.get("https://www.google.com/");
+        String URL = driver.getCurrentUrl();
+        driver.manage().window().maximize();
+        System.out.println("the URL is : " +URL);
+        Thread.sleep(2000);
+
+        
+    }
+
 }
