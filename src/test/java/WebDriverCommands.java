@@ -68,6 +68,7 @@ public class WebDriverCommands {
         driver.navigate().refresh();
 
         driver.navigate().back();
+        driver.close();
 
 
 
